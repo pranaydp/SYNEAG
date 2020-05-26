@@ -1,0 +1,11 @@
+{
+	"labels": ["January", "February", "March", "April", "May"],
+	"datasets": [
+		{
+			"data": [65, 59, 80, 81, 56]
+		},
+		{
+			"data": [65, 59, 80, 81, 56]
+		}
+	]
+}
