@@ -3,6 +3,7 @@
 import React, { Component } from "react";
 import DenseTable from "../../container/txt";
 import Chart from "../../container/Chart";
+import Myprojects from "../../container/Myproject";
 
 class Content extends Component {
 	render() {
@@ -10,7 +11,7 @@ class Content extends Component {
 			<div className='panel-body'>
 				<div className='row'>
 					<div className='col-lg-7 col-xs-12 col-md-7'>
-						<DenseTable />
+						<Myprojects />
 					</div>
 					<div className='col-lg-5 col-xs-12 col-md-5'>
 						<Chart />

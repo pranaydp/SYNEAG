@@ -9,11 +9,8 @@ import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
 
 import Header from "./components/Header/Header";
-import Sidebar from "./components/Sidebar/Sidebar";
-import Myprojects from "./container/Myproject";
-import Chart from "../src/container/Chart";
-
 import store from "./store/store";
+import Content from "./components/Content/Content";
 const App = () => {
 	useEffect(() => {
 		M.AutoInit();
@@ -22,17 +19,7 @@ const App = () => {
 		<Provider store={store}>
 			<div>
 				<Header />
-				<div class='row'>
-					{/*<div class='col s12'>
-						This div is 12-columns wide on all screen sizes
-	</div>*/}
-					<div class='col s6'>
-						<Myprojects />
-					</div>
-					<div class='col s6'>
-						<Chart />
-					</div>
-				</div>
+				<Content />
 			</div>
 		</Provider>
 	);
