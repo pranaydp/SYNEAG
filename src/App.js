@@ -10,9 +10,8 @@ import M from "materialize-css/dist/js/materialize.min.js";
 
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Content from "../src/container/Content";
+import Myprojects from "./container/Myproject";
 import Chart from "../src/container/Chart";
-
 
 import store from "./store/store";
 const App = () => {
@@ -28,7 +27,7 @@ const App = () => {
 						This div is 12-columns wide on all screen sizes
 	</div>*/}
 					<div class='col s6'>
-						<Content/>
+						<Myprojects />
 					</div>
 					<div class='col s6'>
 						<Chart />

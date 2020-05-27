@@ -1,5 +1,5 @@
 {
-	"chartdata": {
+	"chartdata1": {
 		"labels": ["January", "February", "March", "April", "May"],
 		"datasets": [
 			{
@@ -10,21 +10,48 @@
 			}
 		]
 	},
-	"projectlist":[
+	"projectlist": [
 		{
-			"Projectname":"SPEED",
-			"Frameworktype":"DEV",
-			"Suntype":"ABCD"
+			"Projectname": "SPEED",
+			"Frameworktype": "DEV",
+			"Suntype": "ABCD"
 		},
 		{
-			"Projectname":"SPEED",
-			"Frameworktype":"DEV",
-			"Suntype":"ABCD"
+			"Projectname": "SPEED",
+			"Frameworktype": "DEV",
+			"Suntype": "ABCD"
 		},
 		{
-			"Projectname":"SPEED",
-			"Frameworktype":"DEV",
-			"Suntype":"ABCD"
+			"Projectname": "SPEED",
+			"Frameworktype": "DEV",
+			"Suntype": "ABCD"
+		}
+	],
+	"chartdata": [
+		{
+			"month": "Jan",
+			"maturityScore": 32,
+			"qualityScore": 42
+		},
+		{
+			"month": "Feb",
+			"maturityScore": 42,
+			"qualityScore": 33
+		},
+		{
+			"month": "Mar",
+			"maturityScore": 42,
+			"qualityScore": 54
+		},
+		{
+			"month": "Apr",
+			"maturityScore": 33,
+			"qualityScore": 44
+		},
+		{
+			"month": "May",
+			"maturityScore": 36,
+			"qualityScore": 40
 		}
 	]
 }
