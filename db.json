@@ -9,5 +9,22 @@
 				"data": [65, 59, 80, 81, 56]
 			}
 		]
-	}
+	},
+	"projectlist":[
+		{
+			"Projectname":"SPEED",
+			"Frameworktype":"DEV",
+			"Suntype":"ABCD"
+		},
+		{
+			"Projectname":"SPEED",
+			"Frameworktype":"DEV",
+			"Suntype":"ABCD"
+		},
+		{
+			"Projectname":"SPEED",
+			"Frameworktype":"DEV",
+			"Suntype":"ABCD"
+		}
+	]
 }

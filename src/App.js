@@ -10,10 +10,9 @@ import M from "materialize-css/dist/js/materialize.min.js";
 
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
-import Content from "./components/Content/Content";
+import Content from "../src/container/Content";
 import Chart from "../src/container/Chart";
 
-import DenseTable from "../src/container/txt";
 
 import store from "./store/store";
 const App = () => {
@@ -25,11 +24,11 @@ const App = () => {
 			<div>
 				<Header />
 				<div class='row'>
-					<div class='col s12'>
+					{/*<div class='col s12'>
 						This div is 12-columns wide on all screen sizes
-					</div>
+	</div>*/}
 					<div class='col s6'>
-						<DenseTable />
+						<Content/>
 					</div>
 					<div class='col s6'>
 						<Chart />
