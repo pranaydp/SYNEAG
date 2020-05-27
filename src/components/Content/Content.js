@@ -8,9 +8,9 @@ import Myprojects from "../../container/Myproject";
 class Content extends Component {
 	render() {
 		return (
-			<div className='panel-body'>
+			<div className='panel-body ml-4'>
 				<div className='row'>
-					<div className='col-lg-7 col-xs-12 col-md-7'>
+					<div className='col-lg-7 col-xs-12 col-md-7 mr-3'>
 						<Myprojects />
 					</div>
 					<div className='col-lg-5 col-xs-12 col-md-5'>

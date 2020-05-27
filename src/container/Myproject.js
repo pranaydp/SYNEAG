@@ -20,7 +20,7 @@ const Myprojects = (props) => {
 
 	console.log("projects", props);
 	return (
-		<div>
+		<div className="card">
 			<ProjectDetails projectlist={props.content} />
 		</div>
 	);

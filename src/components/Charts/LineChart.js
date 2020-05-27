@@ -35,10 +35,10 @@ const LineChart = (props) => {
 	};
 
 	return (
-		<div>
+		<div className="card">
 			<Line
 				data={state}
-				height={"150px"}
+				height={"170px"}
 				options={{
 					title: {
 						display: true,
