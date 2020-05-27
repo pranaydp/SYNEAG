@@ -13,6 +13,7 @@ const TableHeader = () => {
 					"Framework Type",
 					"Framework Subtype",
 					"Pending Action",
+					""
 				].map((text, index) => {
 					return <TableCell align='right'>{text}</TableCell>;
 				})}

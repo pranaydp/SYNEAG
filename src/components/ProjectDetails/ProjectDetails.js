@@ -10,12 +10,14 @@ import TableContainer from "@material-ui/core/TableContainer";
 const useStyles = makeStyles({
 	table: {
 		minWidth: 650,
+		marginTop:10
 	},
 });
 const ProjectDetails = (props) => {
 	const classes = useStyles();
 	return (
-		<TableContainer component={Paper}>
+		<TableContainer>
+		<h5>My Projects</h5>
 			<Table className={classes.table} aria-label='simple table'>
 				<TableHeader />
 				<TableContent content={props.projectlist} />
