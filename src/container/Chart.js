@@ -11,11 +11,29 @@ class Chart extends Component {
 		this.props.get_chart();
 	}
 	render() {
+		let montharr = [];
+		let qualityarr = [];
+		let maturityarr = [];
+		if (this.props.chart.Data !== null) {
+			debugger;
+			this.props.chart.Data.map((record) => {
+				montharr.push(record.month);
+				qualityarr.push(record.qualityScore);
+				maturityarr.push(record.maturityScore);
+			});
+			//console.log("playername", playername);
+		}
 		debugger;
-		console.log(this.props.chart);
+		console.log("data", this.props.chart.Data);
+
 		return (
 			<Fragment>
-				<LineChart data={this.props.chart} />
+				<LineChart
+					month={montharr}
+					maturity={maturityarr}
+					quality={qualityarr}
+					data={this.props.chart}
+				/>
 			</Fragment>
 		);
 	}

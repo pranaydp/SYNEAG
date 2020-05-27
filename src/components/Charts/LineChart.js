@@ -5,28 +5,31 @@ import { Line } from "react-chartjs-2";
 
 const LineChart = (props) => {
 	console.log(props.data);
-	const { label, dataset } = props.data;
+	const { maturity, quality } = props;
 	//const [maturity, quality] = dataset;
-	console.log(dataset);
+	//console.log(dataset);
 	const state = {
-		labels: label,
+		labels: props.month,
+
+		//datasets: dataset,
 		datasets: [
 			{
 				label: "Maturity score",
 				fill: false,
-				lineTension: 0.5,
-				borderColor: "rgba(0,0,0,1)",
-				borderWidth: 2,
-				data: [65, 59, 80, 81, 56],
+				lineTension: 0.1,
+				borderColor: "rgba(0,0,255,1)",
+				borderWidth: 1.5,
+				data: maturity,
 			},
+
 			{
 				label: "Quality score",
 				fill: false,
-				lineTension: 0.5,
-				backgroundColor: "rgba(75,192,192,1)",
-
-				borderWidth: 2,
-				data: [68, 50, 70, 88, 46],
+				lineTension: 0.1,
+				backgroundColor: "rgba(249, 180, 45,1)",
+				borderColor: "rgba(255,0,0,1)",
+				borderWidth: 1.5,
+				data: quality,
 			},
 		],
 	};
@@ -35,11 +38,12 @@ const LineChart = (props) => {
 		<div>
 			<Line
 				data={state}
+				height={"150px"}
 				options={{
 					title: {
 						display: true,
-						text: "",
-						fontSize: 20,
+						text: "Maturity % and Quality Score Trend",
+						fontSize: 12,
 					},
 					legend: {
 						display: true,
