@@ -4,7 +4,7 @@ import React, { Fragment, Component } from "react";
 import LineChart from "../components/Charts/LineChart";
 
 import { connect } from "react-redux";
-import { _get_chart } from "../store/actions/_chart_actions";
+import { _get_chart } from "../store/actions/Chart_actions/_chart_actions";
 
 class Chart extends Component {
 	componentDidMount() {

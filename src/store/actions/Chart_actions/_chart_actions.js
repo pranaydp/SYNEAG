@@ -1,8 +1,6 @@
 /** @format */
 
-import { GET_CHARTDATA, CHART_ERROR } from "../actiontype/actiontypes";
-
-import dataJSON from "../../components/Charts/db.json";
+import { GET_CHARTDATA, CHART_ERROR } from "../../actiontype/actiontypes";
 
 //get chart data and bind it
 export const _get_chart = () => {

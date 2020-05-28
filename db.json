@@ -29,27 +29,27 @@
 	],
 	"chartdata": [
 		{
-			"month": "Jan",
+			"month": "Jan-2020",
 			"maturityScore": 32,
 			"qualityScore": 42
 		},
 		{
-			"month": "Feb",
+			"month": "Feb-2020",
 			"maturityScore": 42,
 			"qualityScore": 33
 		},
 		{
-			"month": "Mar",
+			"month": "Mar-2020",
 			"maturityScore": 42,
 			"qualityScore": 54
 		},
 		{
-			"month": "Apr",
+			"month": "Apr-2020",
 			"maturityScore": 33,
 			"qualityScore": 44
 		},
 		{
-			"month": "May",
+			"month": "May-2020",
 			"maturityScore": 36,
 			"qualityScore": 40
 		}

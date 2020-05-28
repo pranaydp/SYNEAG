@@ -11,7 +11,7 @@ const LineChart = (props) => {
 	const state = {
 		labels: props.month,
 
-		//datasets: dataset,
+		//datasets: dataset,p
 		datasets: [
 			{
 				label: "Maturity score",
@@ -35,7 +35,7 @@ const LineChart = (props) => {
 	};
 
 	return (
-		<div className="card">
+		<div className='card' data-test='Linechart-app'>
 			<Line
 				data={state}
 				height={"170px"}
