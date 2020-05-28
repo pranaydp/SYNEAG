@@ -20,7 +20,7 @@ const Myprojects = (props) => {
 
 	console.log("projects", props);
 	return (
-		<div className="card">
+		<div className='card' style={{ height: "298px" }}>
 			<ProjectDetails projectlist={props.content} />
 		</div>
 	);

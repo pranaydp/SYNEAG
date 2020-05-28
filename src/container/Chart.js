@@ -5,6 +5,7 @@ import LineChart from "../components/Charts/LineChart";
 
 import { connect } from "react-redux";
 import { _get_chart } from "../store/actions/Chart_actions/_chart_actions";
+import Spinner from "../components/Spinner/Spinner";
 
 class Chart extends Component {
 	componentDidMount() {
@@ -26,16 +27,20 @@ class Chart extends Component {
 		debugger;
 		console.log("data", this.props.chart.Data);
 
-		return (
-			<Fragment>
-				<LineChart
-					month={montharr}
-					maturity={maturityarr}
-					quality={qualityarr}
-					data={this.props.chart}
-				/>
-			</Fragment>
-		);
+		if (this.props.chart.Data === null) {
+			return <Spinner />;
+		} else {
+			return (
+				<Fragment>
+					<LineChart
+						month={montharr}
+						maturity={maturityarr}
+						quality={qualityarr}
+						data={this.props.chart}
+					/>
+				</Fragment>
+			);
+		}
 	}
 }
 

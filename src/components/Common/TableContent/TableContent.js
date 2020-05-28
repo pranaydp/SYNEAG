@@ -11,7 +11,7 @@ const TableContent = (props) => {
 		<TableBody>
 			{props.content !== null
 				? props.content.map((row) => (
-						<TableRow key={row.name}>
+						<TableRow hover key={row.name}>
 							<TableCell component='th' scope='row'>
 								{row.Projectname}
 							</TableCell>

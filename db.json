@@ -53,5 +53,49 @@
 			"maturityScore": 36,
 			"qualityScore": 40
 		}
+	],
+	"MaturityScore": [
+		{
+			"monthYear": "Jan-2020",
+			"currentmaurityrating": 32,
+			"maturityScore": 42,
+			"maturities": 23,
+			"maturitystatus": "red"
+		},
+		{
+			"monthYear": "Jan-2020",
+			"currentmaurityrating": 32,
+			"maturityScore": 42,
+			"maturities": 23,
+			"maturitystatus": "red"
+		},
+		{
+			"monthYear": "Jan-2020",
+			"currentmaurityrating": 32,
+			"maturityScore": 42,
+			"maturities": 23,
+			"maturitystatus": "red"
+		},
+		{
+			"monthYear": "Jan-2020",
+			"currentmaurityrating": 32,
+			"maturityScore": 42,
+			"maturities": 23,
+			"maturitystatus": "red"
+		},
+		{
+			"monthYear": "Jan-2020",
+			"currentmaurityrating": 32,
+			"maturityScore": 42,
+			"maturities": 23,
+			"maturitystatus": "red"
+		},
+		{
+			"monthYear": "Jan-2020",
+			"currentmaurityrating": 32,
+			"maturityScore": 42,
+			"maturities": 23,
+			"maturitystatus": "red"
+		}
 	]
 }
