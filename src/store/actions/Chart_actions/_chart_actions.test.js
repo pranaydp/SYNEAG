@@ -9,7 +9,7 @@ import thunk from "redux-thunk";
 import fetchMock from "fetch-mock";
 import expect from "expect"; // You can use any testing library
 
-const middlewares = [thunk];
+const middlewares = [thunk]; 
 const mockStore = configureMockStore(middlewares);
 
 export function Chartdata() {
