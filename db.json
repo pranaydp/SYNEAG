@@ -54,60 +54,12 @@
 			"qualityScore": 40
 		}
 	],
-	"MaturityScore": [
-		{
-			"monthYear": "Jan-2020",
-			"currentmaurityrating": 32,
-			"maturityScore": 42,
-			"maturities": 23,
-			"maturitystatus": "red"
-		},
-		{
-			"monthYear": "Jan-2020",
-			"currentmaurityrating": 32,
-			"maturityScore": 42,
-			"maturities": 23,
-			"maturitystatus": "red"
-		},
-		{
-			"monthYear": "Jan-2020",
-			"currentmaurityrating": 32,
-			"maturityScore": 42,
-			"maturities": 23,
-			"maturitystatus": "red"
-		},
-		{
-			"monthYear": "Jan-2020",
-			"currentmaurityrating": 32,
-			"maturityScore": 42,
-			"maturities": 23,
-			"maturitystatus": "red"
-		},
-		{
-			"monthYear": "Jan-2020",
-			"currentmaurityrating": 32,
-			"maturityScore": 42,
-			"maturities": 23,
-			"maturitystatus": "red"
-		},
-		{
-			"monthYear": "Jan-2020",
-			"currentmaurityrating": 32,
-			"maturityScore": 42,
-			"maturities": 23,
-			"maturitystatus": "red"
-		}
-	],
-
-	"projectInfo":{
+	"projectInfo": {
 		"message": "success",
 		"data": {
 			"project": {
 				"projectName": "SPEED",
-				"programManagers": [
-					"Hrushikesh Bawachkar",
-					"Deepak Zambare"
-				],
+				"programManagers": ["Hrushikesh Bawachkar", "Deepak Zambare"],
 				"frameworkType": "Development",
 				"frameworkSubtype": "Development",
 				"projectDescription": "SPEED is an Project management project which calculated Health of the project",
@@ -141,6 +93,38 @@
 				{
 					"id": 2,
 					"monthYear": "Februry 2020",
+					"maturityScore": 137,
+					"maturityPercentage": 91.0,
+					"currentMaturityStatus": "HIGH",
+					"currentMaturityRating": "GREEN"
+				},
+				{
+					"id": 3,
+					"monthYear": "March 2020",
+					"maturityScore": 137,
+					"maturityPercentage": 91.0,
+					"currentMaturityStatus": "HIGH",
+					"currentMaturityRating": "GREEN"
+				},
+				{
+					"id": 4,
+					"monthYear": "April 2020",
+					"maturityScore": 137,
+					"maturityPercentage": 91.0,
+					"currentMaturityStatus": "LOW",
+					"currentMaturityRating": "RED"
+				},
+				{
+					"id": 5,
+					"monthYear": "May 2020",
+					"maturityScore": 137,
+					"maturityPercentage": 91.0,
+					"currentMaturityStatus": "HIGH",
+					"currentMaturityRating": "GREEN"
+				},
+				{
+					"id": 6,
+					"monthYear": "June 2020",
 					"maturityScore": 137,
 					"maturityPercentage": 91.0,
 					"currentMaturityStatus": "HIGH",

@@ -3,16 +3,17 @@
 import { GET_MATURITYSCORE, CHART_ERROR } from "../../actiontype/actiontypes";
 
 const initialState = {
-	scoredata: null,
+	maturitydata: null,
+	qualitydata: null,
 };
 
-const score_reducer = (state = initialState, action) => {
+const projectinfo_reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case GET_MATURITYSCORE:
 			debugger;
 			return {
 				...state,
-				scoredata: action.payload,
+				maturitydata: action.payload.data.maturityDetailsList,
 				//dataset: action.payload.datasets,
 			};
 
@@ -21,4 +22,4 @@ const score_reducer = (state = initialState, action) => {
 	}
 };
 
-export default score_reducer;
+export default projectinfo_reducer;

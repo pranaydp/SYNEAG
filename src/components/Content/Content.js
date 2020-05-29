@@ -4,8 +4,8 @@ import React, { Component } from "react";
 
 import Chart from "../../container/Chart";
 import Myprojects from "../../container/Myproject";
-import Projectinfo from "../../container/ProjectInfo/Projectinfo"
-
+import Projectinfo from "../../container/ProjectInfo/Projectinfo";
+import TabMenu from "../Tabs/TabMenu";
 class Content extends Component {
 	render() {
 		return (
@@ -20,7 +20,10 @@ class Content extends Component {
 				</div>
 				<div className='row'>
 					<div className='col-lg-4 col-xs-12 col-md-4'>
-					<Projectinfo />
+						<Projectinfo />
+					</div>
+					<div className='col-lg-8 col-xs-12 col-md-4'>
+						<TabMenu />
 					</div>
 				</div>
 			</div>

@@ -9,6 +9,8 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Myproject from "../../container/Myproject";
+import DenseTable from "../PorjectInfoDetails/MaturityDetails/MaturityScoreDetails";
+import MaturityScore from "../../container/ProjectInfo/MaturityScore";
 
 const useStyles = makeStyles({
 	root: {
@@ -55,37 +57,7 @@ export default function TabMenu() {
 				<Tab label='Quality Score' />
 			</Tabs>
 			<TabPanel value={value} index={0}>
-				<table className='highlight'>
-					<thead>
-						<tr>
-							<th>Month Year </th>
-							<th>Maturity Score</th>
-							<th>Maturity %</th>
-							<th>Current Maturity Rating </th>
-						</tr>
-					</thead>
-
-					<tbody>
-						<tr>
-							<td>2020</td>
-							<td>30</td>
-							<td>10%</td>
-							<td>2</td>
-						</tr>
-						<tr>
-							<td>2020</td>
-							<td>30</td>
-							<td>10%</td>
-							<td>2</td>
-						</tr>
-						<tr>
-							<td>2020</td>
-							<td>30</td>
-							<td>10%</td>
-							<td>2</td>
-						</tr>
-					</tbody>
-				</table>
+				<MaturityScore />
 			</TabPanel>
 			<TabPanel value={value} index={1}>
 				<table className='highlight'>
