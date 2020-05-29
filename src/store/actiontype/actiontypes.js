@@ -9,3 +9,7 @@ export const CONTENT_ERROR = "CONTENT_ERROR";
 ///Maturity and quality
 export const ERROR_LOGS = "ERROR_LOGS";
 export const GET_MATURITYSCORE = "GET_MATURITYSCORE";
+
+//Project Info
+export const PROJECTINFO_GET = "PROJECTINFO_GET";
+export const PROJECTINFO_ERROR = "PROJECTINFO_ERROR";
