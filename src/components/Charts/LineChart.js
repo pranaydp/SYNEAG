@@ -38,7 +38,7 @@ const LineChart = (props) => {
 		<div className='card' data-test='Linechart-app'>
 			<Line
 				data={state}
-				height={"170px"}
+				height={"174px"}
 				options={{
 					title: {
 						display: true,

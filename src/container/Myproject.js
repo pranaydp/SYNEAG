@@ -5,6 +5,8 @@ import { connect } from "react-redux";
 import { contentDetails } from "../store/actions/ContentAction/contentaction";
 
 import ProjectDetails from "../components/ProjectDetails/ProjectDetails";
+import Spinner from "../components/Spinner/Spinner";
+
 
 const Myprojects = (props) => {
 	const { getProject } = props;
@@ -19,11 +21,15 @@ const Myprojects = (props) => {
 	};
 
 	console.log("projects", props);
+	if(props.content === null) {
+	return <Spinner /> } 
+	else {
 	return (
-		<div className='card' style={{ height: "298px" }}>
-			<ProjectDetails projectlist={props.content} />
+		<div className='card' style={{ height: "348px" }}>
+            <ProjectDetails projectlist={props.content} />
 		</div>
 	);
+	}
 };
 
 const mapStateToProps = (state) => {
