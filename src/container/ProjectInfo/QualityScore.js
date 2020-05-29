@@ -1,36 +1,36 @@
 /** @format */
 import React, { Fragment, useEffect } from "react";
 import { connect } from "react-redux";
-import MaturityTable from "../../components/PorjectInfoDetails/MaturityDetails/MaturityScoreDetails";
+import QualityTable from "../../components/PorjectInfoDetails/QualityDetails/QualityScoreDetails";
 import { _get_maturityqualityscore } from "../../store/actions/ProjectInfo_actions/_projectInfo_actions";
-const MaturityScore = (props) => {
-	const { _getmaturitydata } = props;
+const QualityScore = (props) => {
+	const { _getqualitydata } = props;
 
 	useEffect(() => {
 		debugger;
 		setTimeout(() => {
-			_getmaturitydata();
+			_getqualitydata();
 		}, 100);
 	}, []);
 
 	console.log("maturitydaad", props.maturity);
 	return (
 		<div>
-			<MaturityTable maturities={props.maturity} />
+			<QualityTable qualities={props.quality} />
 		</div>
 	);
 };
 
 const mapstatetoprops = (state) => {
 	return {
-		maturity: state.projectinfo.maturitydata,
+		quality: state.projectinfo.qualitydata,
 	};
 };
 
 const mapdispatchtoprops = (dispatch) => {
 	return {
-		_getmaturitydata: () => dispatch(_get_maturityqualityscore()),
+		_getqualitydata: () => dispatch(_get_maturityqualityscore()),
 	};
 };
 
-export default connect(mapstatetoprops, mapdispatchtoprops)(MaturityScore);
+export default connect(mapstatetoprops, mapdispatchtoprops)(QualityScore);

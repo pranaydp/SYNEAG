@@ -13,17 +13,17 @@ const useStyles = makeStyles({
 		minWidth: 650,
 	},
 });
-export default function DenseTable(props) {
+export default function MaturityTable(props) {
 	const classes = useStyles();
 	const { maturities } = props;
 
 	console.log("maturity", maturities);
 	const tableheader = [
 		"Month Year",
-		"MaturityScore",
-		"MaturityPercentage",
-		"CurrentMaturityStatus",
-		"CurrentMaturityRating",
+		"Maturity Score",
+		"Maturity Percentage",
+		"CurrentMaturity Status",
+		"CurrentMaturity Rating",
 	];
 	return (
 		<Fragment>

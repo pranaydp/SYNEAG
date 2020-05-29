@@ -1,9 +1,10 @@
 /** @format */
 
 import { GET_MATURITYSCORE, CHART_ERROR } from "../../actiontype/actiontypes";
-import { PROJECTINFO_GET , PROJECTINFO_ERROR } from "../../actiontype/actiontypes";
-
-
+import {
+	PROJECTINFO_GET,
+	PROJECTINFO_ERROR,
+} from "../../actiontype/actiontypes";
 
 const initialState = {
 	maturitydata: null,
@@ -17,17 +18,17 @@ const projectinfo_reducer = (state = initialState, action) => {
 			return {
 				...state,
 				maturitydata: action.payload.data.maturityDetailsList,
+				qualitydata: action.payload.data.qualityDetailsList,
 				//dataset: action.payload.datasets,
 			};
-			case PROJECTINFO_GET:
-				debugger;
-				return {
-					...state,
-					projectinfodetails: action.payload.data.project,
-					//dataset: action.payload.datasets,
-				};
+		case PROJECTINFO_GET:
+			debugger;
+			return {
+				...state,
+				projectinfodetails: action.payload.data.project,
+				//dataset: action.payload.datasets,
+			};
 
-			
 		default:
 			return state;
 	}

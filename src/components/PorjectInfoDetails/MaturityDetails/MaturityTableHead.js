@@ -14,7 +14,11 @@ export default function MaturityTableHead(props) {
 			<TableRow>
 				{header &&
 					header.map((rows) => {
-						return <TableCell>{rows}</TableCell>;
+						return (
+							<TableCell>
+								<b>{rows}</b>
+							</TableCell>
+						);
 					})}
 			</TableRow>
 		</TableHead>

@@ -79,6 +79,34 @@
 					"releaseDate": "1-Feb-2019",
 					"qualityScore": 145,
 					"qualityRating": "HIGH"
+				},
+				{
+					"id": 3,
+					"releaseName": "Release third",
+					"releaseDate": "1-Feb-2019",
+					"qualityScore": 145,
+					"qualityRating": "HIGH"
+				},
+				{
+					"id": 4,
+					"releaseName": "Release fourth",
+					"releaseDate": "1-Feb-2019",
+					"qualityScore": 145,
+					"qualityRating": "LOW"
+				},
+				{
+					"id": 5,
+					"releaseName": "Release fifth",
+					"releaseDate": "1-Feb-2019",
+					"qualityScore": 145,
+					"qualityRating": "HIGH"
+				},
+				{
+					"id": 6,
+					"releaseName": "Release six",
+					"releaseDate": "1-Feb-2019",
+					"qualityScore": 145,
+					"qualityRating": "LOW"
 				}
 			],
 			"maturityDetailsList": [
