@@ -4,17 +4,14 @@ import React from "react";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
-const TableHeader = () => {
+
+
+const TableHeader = (props) => {
+	debugger;
 	return (
 		<TableHead>
 			<TableRow>
-				{[
-					"Project Name",
-					"Framework Type",
-					"Framework Subtype",
-					"Pending Action",
-					""
-				].map((text, index) => {
+				{props.heading.map((text, index) => {
 					return <TableCell align='right'>{text}</TableCell>;
 				})}
 			</TableRow>

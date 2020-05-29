@@ -14,12 +14,13 @@ const useStyles = makeStyles({
 	},
 });
 const ProjectDetails = (props) => {
+	debugger;
 	const classes = useStyles();
 	return (
 		<TableContainer>
 		<h5 style={{paddingLeft:"10px"}}>My Projects</h5>
 			<Table className={classes.table} aria-label='simple table'>
-				<TableHeader />
+				<TableHeader heading={props.heading} />
 				<TableContent content={props.projectlist} />
 			</Table>
 		</TableContainer>

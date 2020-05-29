@@ -8,6 +8,14 @@ import ProjectDetails from "../components/ProjectDetails/ProjectDetails";
 import Spinner from "../components/Spinner/Spinner";
 
 
+
+const Tableheading = [
+	"Project Name",
+	"Framework Type",
+	"Framework Subtype",
+	"Pending Action",
+	""
+];
 const Myprojects = (props) => {
 	const { getProject } = props;
 
@@ -26,7 +34,7 @@ const Myprojects = (props) => {
 	else {
 	return (
 		<div className='card' style={{ height: "348px" }}>
-            <ProjectDetails projectlist={props.content} />
+            <ProjectDetails projectlist={props.content} heading={Tableheading}  />
 		</div>
 	);
 	}
