@@ -42,7 +42,7 @@ const LineChart = (props) => {
 				options={{
 					title: {
 						display: true,
-						text: "Maturity % and Quality Score Trend",
+						text: "Maturity Score and Quality Score Trend",
 						fontSize: 12,
 					},
 					legend: {
