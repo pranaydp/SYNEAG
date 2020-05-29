@@ -97,5 +97,56 @@
 			"maturities": 23,
 			"maturitystatus": "red"
 		}
-	]
+	],
+
+	"projectInfo":{
+		"message": "success",
+		"data": {
+			"project": {
+				"projectName": "SPEED",
+				"programManagers": [
+					"Hrushikesh Bawachkar",
+					"Deepak Zambare"
+				],
+				"frameworkType": "Development",
+				"frameworkSubtype": "Development",
+				"projectDescription": "SPEED is an Project management project which calculated Health of the project",
+				"projectHealth": "AMBER"
+			},
+			"qualityDetailsList": [
+				{
+					"id": 1,
+					"releaseName": "Release first",
+					"releaseDate": "23-January-2019",
+					"qualityScore": 123,
+					"qualityRating": "CRISIS"
+				},
+				{
+					"id": 2,
+					"releaseName": "Release second",
+					"releaseDate": "1-Feb-2019",
+					"qualityScore": 145,
+					"qualityRating": "HIGH"
+				}
+			],
+			"maturityDetailsList": [
+				{
+					"id": 1,
+					"monthYear": "January 2020",
+					"maturityScore": 123,
+					"maturityPercentage": 67.0,
+					"currentMaturityStatus": "MODERATE",
+					"currentMaturityRating": "RED"
+				},
+				{
+					"id": 2,
+					"monthYear": "Februry 2020",
+					"maturityScore": 137,
+					"maturityPercentage": 91.0,
+					"currentMaturityStatus": "HIGH",
+					"currentMaturityRating": "GREEN"
+				}
+			]
+		}
+	}
 }
