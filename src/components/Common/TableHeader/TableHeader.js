@@ -12,7 +12,7 @@ const TableHeader = (props) => {
 		<TableHead>
 			<TableRow>
 				{props.heading.map((text, index) => {
-					return <TableCell align='right'>{text}</TableCell>;
+					return <TableCell align='center'>{text}</TableCell>;
 				})}
 			</TableRow>
 		</TableHead>

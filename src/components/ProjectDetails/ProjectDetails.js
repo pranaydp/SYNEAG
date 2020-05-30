@@ -9,7 +9,7 @@ import Table from "@material-ui/core/Table";
 import TableContainer from "@material-ui/core/TableContainer";
 const useStyles = makeStyles({
 	table: {
-		minWidth: 650,
+		minWidth: 690,
 	},
 });
 const ProjectDetails = (props) => {
