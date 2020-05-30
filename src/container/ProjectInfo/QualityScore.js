@@ -3,6 +3,8 @@ import React, { Fragment, useEffect } from "react";
 import { connect } from "react-redux";
 import QualityTable from "../../components/PorjectInfoDetails/QualityDetails/QualityScoreDetails";
 import { _get_maturityqualityscore } from "../../store/actions/ProjectInfo_actions/_projectInfo_actions";
+import Spinner from "../../components/Spinner/Spinner";
+import JustifyContent from "../../components/Common/Box/ErrBox";
 const QualityScore = (props) => {
 	const { _getqualitydata } = props;
 
@@ -14,9 +16,15 @@ const QualityScore = (props) => {
 	}, []);
 
 	console.log("maturitydaad", props.maturity);
+	if (props.quality === null) return <Spinner />;
+
 	return (
 		<div>
-			<QualityTable qualities={props.quality} />
+			{props.quality.length > 0 ? (
+				<QualityTable qualities={props.quality} />
+			) : (
+				<JustifyContent v={9} />
+			)}
 		</div>
 	);
 };

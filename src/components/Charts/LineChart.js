@@ -6,12 +6,8 @@ import { Line } from "react-chartjs-2";
 const LineChart = (props) => {
 	console.log(props.data);
 	const { maturity, quality } = props;
-	//const [maturity, quality] = dataset;
-	//console.log(dataset);
 	const state = {
 		labels: props.month,
-
-		//datasets: dataset,p
 		datasets: [
 			{
 				label: "Maturity score",
@@ -35,7 +31,7 @@ const LineChart = (props) => {
 	};
 
 	return (
-		<div className='card' data-test='Linechart-app'>
+		<div data-test='Linechart-app'>
 			<Line
 				data={state}
 				height={"174px"}
