@@ -15,7 +15,7 @@ export default function MaturityTableHead(props) {
 				{header &&
 					header.map((rows) => {
 						return (
-							<TableCell>
+							<TableCell align='center'>
 								<b>{rows}</b>
 							</TableCell>
 						);

@@ -120,48 +120,48 @@
 					"monthYear": "January 2020",
 					"maturityScore": 123,
 					"maturityPercentage": 67.0,
-					"currentMaturityStatus": "MODERATE",
-					"currentMaturityRating": "RED"
+					"currentMaturityStatus": "RED",
+					"currentMaturityRating": "LOW"
 				},
 				{
 					"id": 2,
 					"monthYear": "Februry 2020",
 					"maturityScore": 137,
 					"maturityPercentage": 91.0,
-					"currentMaturityStatus": "HIGH",
-					"currentMaturityRating": "GREEN"
+					"currentMaturityStatus": "GREEN",
+					"currentMaturityRating": "HIGH"
 				},
 				{
 					"id": 3,
 					"monthYear": "March 2020",
 					"maturityScore": 137,
 					"maturityPercentage": 91.0,
-					"currentMaturityStatus": "HIGH",
-					"currentMaturityRating": "GREEN"
+					"currentMaturityStatus": "GREEN",
+					"currentMaturityRating": "HIGH"
 				},
 				{
 					"id": 4,
 					"monthYear": "April 2020",
 					"maturityScore": 137,
 					"maturityPercentage": 91.0,
-					"currentMaturityStatus": "LOW",
-					"currentMaturityRating": "RED"
+					"currentMaturityStatus": "RED",
+					"currentMaturityRating": "LOW"
 				},
 				{
 					"id": 5,
 					"monthYear": "May 2020",
 					"maturityScore": 137,
 					"maturityPercentage": 91.0,
-					"currentMaturityStatus": "HIGH",
-					"currentMaturityRating": "GREEN"
+					"currentMaturityStatus": "GREEN",
+					"currentMaturityRating": "HIGH"
 				},
 				{
 					"id": 6,
 					"monthYear": "June 2020",
 					"maturityScore": 137,
 					"maturityPercentage": 91.0,
-					"currentMaturityStatus": "HIGH",
-					"currentMaturityRating": "GREEN"
+					"currentMaturityStatus": "GREEN",
+					"currentMaturityRating": "HIGH"
 				}
 			]
 		}

@@ -13,12 +13,12 @@ const QualityTableContent = (props) => {
 				{props.qualitydata &&
 					props.qualitydata.map((row, index) => (
 						<TableRow hover key={row.id}>
-							<TableCell component='th' scope='row'>
+							<TableCell align='center' component='th' scope='row'>
 								{row.releaseDate}
 							</TableCell>
-							<TableCell align='right'>{row.releaseName}</TableCell>
-							<TableCell align='right'>{row.qualityScore}</TableCell>
-							<TableCell align='right'>{row.qualityRating}</TableCell>
+							<TableCell align='center'>{row.releaseName}</TableCell>
+							<TableCell align='center'>{row.qualityScore}</TableCell>
+							<TableCell align='center'>{row.qualityRating}</TableCell>
 						</TableRow>
 					))}
 			</TableBody>

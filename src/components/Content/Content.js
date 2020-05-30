@@ -11,7 +11,7 @@ class Content extends Component {
 		return (
 			<div className='panel-body ml-4'>
 				<div className='row'>
-					<div className='col-lg-7 col-xs-12 col-md-7 mr-3'>
+					<div className='col-lg-7 col-xs-12 col-md-7'>
 						<Myprojects />
 					</div>
 					<div className='col-lg-5 col-xs-12 col-md-5'>

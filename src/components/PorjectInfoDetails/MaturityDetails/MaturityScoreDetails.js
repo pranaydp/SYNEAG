@@ -22,8 +22,8 @@ export default function MaturityTable(props) {
 		"Month Year",
 		"Maturity Score",
 		"Maturity Percentage",
-		"CurrentMaturity Status",
-		"CurrentMaturity Rating",
+		"Maturity Status",
+		"Maturity Rating",
 	];
 	return (
 		<Fragment>

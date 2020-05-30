@@ -4,6 +4,7 @@ import React, { Fragment } from "react";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
+import BadgeButton from "../../Common/BadgeButton/BadgeButton";
 
 const MaturityTableContent = (props) => {
 	debugger;
@@ -12,14 +13,16 @@ const MaturityTableContent = (props) => {
 			<TableBody>
 				{props.maturitydata &&
 					props.maturitydata.map((row, index) => (
-						<TableRow key={row.id}>
-							<TableCell component='th' scope='row'>
+						<TableRow hover key={row.id}>
+							<TableCell align='center' component='th' scope='row'>
 								{row.monthYear}
 							</TableCell>
-							<TableCell align='right'>{row.maturityScore}</TableCell>
-							<TableCell align='right'>{row.maturityPercentage}</TableCell>
-							<TableCell align='right'>{row.currentMaturityStatus}</TableCell>
-							<TableCell align='right'>{row.currentMaturityRating}</TableCell>
+							<TableCell align='center'>{row.maturityScore}</TableCell>
+							<TableCell align='center'>{row.maturityPercentage}</TableCell>
+							<TableCell align='center'>
+								<BadgeButton btnvalue={row.currentMaturityStatus} />
+							</TableCell>
+							<TableCell align='center'>{row.currentMaturityRating}</TableCell>
 						</TableRow>
 					))}
 			</TableBody>
