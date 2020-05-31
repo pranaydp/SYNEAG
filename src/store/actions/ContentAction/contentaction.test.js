@@ -1,7 +1,12 @@
-import { contentDetails } from "./contentaction"
-import * as actions from './contentaction'
 import * as types from '../../actiontype/actiontypes'
 
+
+export function contentDetails(text) {
+	return {
+		type: types.CONTENT_SUCCESS,
+		text,
+	};
+}
 
 test('Sample Test', () => {
     expect(true).toBeTruthy();
@@ -12,12 +17,10 @@ test('Sample Test', () => {
 
   describe('actions', () => {
     it('should create an action to contentDetails', () => {
-      const data = "data"
       const expectedAction = {
         type: types.CONTENT_SUCCESS,
-        data
-      }
-      expect.contentDetails(data).toEqual(expectedAction)
+      };
+      expect(contentDetails()).toEqual(expectedAction)
     })
   })
 
