@@ -9,7 +9,7 @@ import Table from "@material-ui/core/Table";
 import TableContainer from "@material-ui/core/TableContainer";
 const useStyles = makeStyles({
 	table: {
-		minWidth: 690,
+		minWidth: 650, 
 	},
 });
 const ProjectDetails = (props) => {
@@ -18,7 +18,7 @@ const ProjectDetails = (props) => {
 	return (
 		<TableContainer>
 			<h5 style={{ paddingLeft: "10px" }}>My Projects</h5>
-			<Table className={classes.table} size='small' aria-label='simple table'>
+			<Table className={classes.table} size='small' aria-label='a dense table'>
 				<TableHeader heading={props.heading} />
 				<TableContent content={props.projectlist} />
 			</Table>
