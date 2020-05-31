@@ -20,10 +20,11 @@ const useStyles = makeStyles({
 		transform: "scale(0.8)",
 	},
 	title: {
-		fontSize: 14,
+        fontSize: 14,
+        
 	},
 	pos: {
-		marginBottom: 12,
+        marginBottom: 12,
 	},
 });
 export default function ProjectInfoDetails(props) {
@@ -53,26 +54,37 @@ export default function ProjectInfoDetails(props) {
             gutterBottom>
             Project Manager
         </Typography>
-        <Typography className={classes.pos}>{projectinfodata && projectinfodata.programManagers[0]}</Typography>
+        <Typography className={classes.title}>{projectinfodata && projectinfodata.programManagers[0]}</Typography>
         <div className='row'>
             <div className='col-lg-6 col-xs-12 col-md-6'>
+            <div style={{display: "flex",
+                alignItems: "center"}}>
+                <ErrorOutlineIcon color='primary' />
                 <Typography
                     className={classes.title}
+                    style={{paddingLeft:"4px"}}
                     color='textSecondary'
                     gutterBottom>
-                    <ErrorOutlineIcon color='primary' /> Framework
+                     Framework
                 </Typography>
-                <Typography className={classes.pos}>{projectinfodata && projectinfodata.frameworkType}</Typography>
+                </div>
+                <Typography className={classes.pos} style={{paddingLeft:"24px"}}>{projectinfodata && projectinfodata.frameworkType}</Typography>
             </div>
 
             <div className='col-lg-6 col-xs-12 col-md-6'>
+            <div style={{display: "flex",
+                alignItems: "center"}}>
+                <ErrorOutlineIcon color='primary' />
                 <Typography
                     className={classes.title}
+                    style={{paddingLeft:"4px"}}
                     color='textSecondary'
                     gutterBottom>
-                    <ErrorOutlineIcon color='primary' /> Sub Framework
+                     Sub Framework
                 </Typography>
-                <Typography className={classes.pos}>{projectinfodata && projectinfodata.frameworkSubtype}</Typography>
+                </div>
+
+                <Typography className={classes.pos} style={{paddingLeft:"24px"}}>{projectinfodata && projectinfodata.frameworkSubtype}</Typography>
             </div>
         </div>
 
