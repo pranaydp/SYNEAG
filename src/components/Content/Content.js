@@ -2,7 +2,7 @@
 
 import React, { Component } from "react";
 
-import Chart from "../../container/Chart";
+import Chart from "../../container/Chart/Chart";
 import Myprojects from "../../container/Myproject";
 import Projectinfo from "../../container/ProjectInfo/Projectinfo";
 import TabMenu from "../Tabs/TabMenu";

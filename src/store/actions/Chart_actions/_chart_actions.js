@@ -3,6 +3,14 @@
 import { GET_CHARTDATA, CHART_ERROR } from "../../actiontype/actiontypes";
 
 //get chart data and bind it
+export function _actionSucces(data) {
+	return { type: GET_CHARTDATA, payload: data };
+}
+
+export function _actionFailure(err) {
+	return { type: CHART_ERROR, payload: err };
+}
+
 export const _get_chart = () => {
 	return async (dispatch) => {
 		//console.log("", dataJSON);
@@ -11,9 +19,9 @@ export const _get_chart = () => {
 			const res = await fetch("http://localhost:5000/chartdata");
 			const data = await res.json();
 
-			dispatch({ type: GET_CHARTDATA, payload: data });
+			dispatch(_actionSucces(data));
 		} catch (err) {
-			dispatch({ type: CHART_ERROR, payload: err });
+			dispatch(_actionFailure(err));
 		}
 	};
 };

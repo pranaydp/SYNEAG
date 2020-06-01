@@ -89,22 +89,24 @@ p {
 span.badge.badge-danger {
 	font-family: Raleway-SemiBold;
 	font-size: 13px;
-	color: rgba(238, 115, 110, 0.75);
+	color: #da5c40;
 	letter-spacing: 1px;
-	line-height: 15px;
-	border: 1px solid rgba(238, 115, 110, 0.75);
+	line-height: 22px;
+	/* border: 1px solid #e47681; */
+	background-color: #f3bebe;
 	border-radius: 40px;
-	background: transparent;
+	/* background: transparent; */
 	transition: all 0.3s ease 0s;
 }
 span.badge.badge-success {
 	font-family: Raleway-SemiBold;
 	font-size: 13px;
-	color: rgba(123, 240, 162, 0.75);
+	color: rgba(57, 99, 71, 0.75);
 	letter-spacing: 1px;
-	line-height: 15px;
-	border: 1px solid rgba(123, 240, 162, 0.75);
+	background-color: #a9f3c3;
+	line-height: 22px;
+	/* border: 1px solid rgba(123, 240, 162, 0.75); */
 	border-radius: 40px;
-	background: transparent;
+	/* background: transparent; */
 	transition: all 0.3s ease 0s;
 }

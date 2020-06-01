@@ -7,7 +7,7 @@ let btnclass = "";
 const BadgeButton = (props) => {
 	const { btnvalue } = props;
 
-	if (btnvalue === "RED") btnclass = "danger";
+	if (btnvalue === "Red") btnclass = "danger";
 	else btnclass = "success";
 	return (
 		<Fragment>
