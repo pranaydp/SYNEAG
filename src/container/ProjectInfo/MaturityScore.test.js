@@ -5,7 +5,7 @@ import React from "react";
 import Enzyme, { shallow } from "enzyme";
 import EnzymeAdapter from "enzyme-adapter-react-16";
 import { createStore, applyMiddleware } from "redux";
-import { Chart } from "./Chart.js";
+import { MaturityScore } from "./MaturityScore.js";
 import { middleware } from "../../store/store";
 import chart_reducer from "../../store/reducer/ProjectInfoReducer/ProjectInfoReducer";
 
@@ -21,7 +21,7 @@ const storeFactory = (statevalue) => {
 
 const setup = (initialState = {}, props = {}) => {
 	const store = storeFactory(initialState);
-	const wrapper = shallow(<Chart store={store} {...props} />);
+	const wrapper = shallow(<MaturityScore store={store} {...props} />);
 	console.log(wrapper.debug());
 	return wrapper;
 };
@@ -32,8 +32,8 @@ describe("renders", () => {
 	describe("Maturity score details should be render", () => {
 		let wrapper;
 		beforeEach(() => {
-			const initialState = { chart: [] };
-			const props = { chart: [] };
+			const initialState = { maturity: [] };
+			const props = { maturity: [] };
 			wrapper = setup(initialState, props);
 		});
 		test("Render maturity score component ", () => {
@@ -42,16 +42,16 @@ describe("renders", () => {
 		});
 
 		test("If Null then render `spinner`components", () => {
-			const props = { chart: null };
-			const wrapper = shallow(<Chart {...props} />);
+			const props = { maturity: null };
+			const wrapper = shallow(<MaturityScore {...props} />);
 			const congratsapp = wrapper.find('[data-test="spinner"]');
 
 			expect(congratsapp.length).toBe(1);
 		});
 		test("If not Null then render `Table`components", () => {
-			const props = { chart: ["1"] };
-			const wrapper = shallow(<Chart {...props} />);
-			const congratsapp = wrapper.find('[data-test="Chart-input"]');
+			const props = { maturity: ["1"] };
+			const wrapper = shallow(<MaturityScore {...props} />);
+			const congratsapp = wrapper.find('[data-test="Maturity-table"]');
 
 			expect(congratsapp.length).toBe(1);
 		});

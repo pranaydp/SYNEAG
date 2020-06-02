@@ -12,17 +12,31 @@ const setup = (props = {}, state = null) => {
 	if (state) wrapper.setState(state);
 	return wrapper;
 };
+describe("Render Line chart component", () => {
+	test("Line chart need to display", () => {
+		const props = { chart: [] };
+		const wrapper = shallow(<LineChart {...props} />);
+		expect(wrapper.exists()).toBe(true);
+	});
 
-test("Line chart need to display", () => {
-	const props = null;
-	const wrapper = setup();
-	expect(wrapper.exists()).toBe(true);
-});
+	test("Line chart need to display", () => {
+		const props = { chart: [] };
+		const wrapper = shallow(<LineChart {...props} />);
+		const congratsapp = wrapper.find('[data-test="Linechart-app"]');
 
-test("Line chart need to display", () => {
-	const props = null;
-	const wrapper = setup();
-	const congratsapp = wrapper.find('[data-test="Linechart-app"]');
+		expect(congratsapp.length).toBe(1);
+	});
 
-	expect(congratsapp.length).toBe(1);
+	test("display  `no data availble message Component` if no data found", () => {
+		const props = { chart: [] };
+		const wrapper = shallow(<LineChart {...props} />);
+		const component = wrapper.find('[data-test="no-data"]');
+		expect(component.length).toBe(1);
+	});
+	test("Render  `Table component render` if  data found", () => {
+		const props = { chart: ["one"] };
+		const wrapper = shallow(<LineChart {...props} />);
+		const component = wrapper.find('[data-test="chart-input"]');
+		expect(component.length).toBe(1);
+	});
 });

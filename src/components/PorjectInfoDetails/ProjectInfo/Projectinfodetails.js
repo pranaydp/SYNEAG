@@ -20,92 +20,95 @@ const useStyles = makeStyles({
 		transform: "scale(0.8)",
 	},
 	title: {
-        fontSize: 14,
-        
+		fontSize: 14,
 	},
 	pos: {
-        marginBottom: 12,
+		marginBottom: 12,
 	},
 });
 export default function ProjectInfoDetails(props) {
-    debugger;
+	debugger;
 	const classes = useStyles();
 	const { projectinfodata } = props;
 
-    console.log("projectinfodata", projectinfodata);
-    const bull = <span className={classes.bullet}>•</span>;
-
+	console.log("projectinfodata", projectinfodata);
+	const bull = <span className={classes.bullet}>•</span>;
 
 	return (
-        <Fragment>
-        <Card className={classes.root}>
+		<Fragment>
+			<Card className={classes.root}>
+				<CardContent>
+					<Typography
+						className={classes.title}
+						color='primary'
+						component='h3'
+						gutterBottom>
+						{projectinfodata && projectinfodata.projectName}
+					</Typography>
+					<Typography
+						className={classes.title}
+						color='textSecondary'
+						gutterBottom>
+						Project Manager
+					</Typography>
+					<Typography className={classes.title}>
+						{projectinfodata && projectinfodata.programManagers[0]}
+					</Typography>
+					<div className='row'>
+						<div className='col-lg-6 col-xs-12 col-md-6'>
+							<div style={{ display: "flex", alignItems: "center" }}>
+								<ErrorOutlineIcon color='primary' />
+								<Typography
+									className={classes.title}
+									style={{ paddingLeft: "4px" }}
+									color='textSecondary'
+									gutterBottom>
+									Framework
+								</Typography>
+							</div>
+							<Typography
+								className={classes.pos}
+								style={{ paddingLeft: "24px" }}>
+								{projectinfodata && projectinfodata.frameworkType}
+							</Typography>
+						</div>
 
-        <CardContent>
-        <Typography
-            className={classes.title}
-            color='primary'
-            component='h3'
-            gutterBottom>
-            {projectinfodata && projectinfodata.projectName}
-        </Typography>
-        <Typography
-            className={classes.title}
-            color='textSecondary'
-            gutterBottom>
-            Project Manager
-        </Typography>
-        <Typography className={classes.title}>{projectinfodata && projectinfodata.programManagers[0]}</Typography>
-        <div className='row'>
-            <div className='col-lg-6 col-xs-12 col-md-6'>
-            <div style={{display: "flex",
-                alignItems: "center"}}>
-                <ErrorOutlineIcon color='primary' />
-                <Typography
-                    className={classes.title}
-                    style={{paddingLeft:"4px"}}
-                    color='textSecondary'
-                    gutterBottom>
-                     Framework
-                </Typography>
-                </div>
-                <Typography className={classes.pos} style={{paddingLeft:"24px"}}>{projectinfodata && projectinfodata.frameworkType}</Typography>
-            </div>
+						<div className='col-lg-6 col-xs-12 col-md-6'>
+							<div style={{ display: "flex", alignItems: "center" }}>
+								<ErrorOutlineIcon color='primary' />
+								<Typography
+									className={classes.title}
+									style={{ paddingLeft: "4px" }}
+									color='textSecondary'
+									gutterBottom>
+									Sub Framework
+								</Typography>
+							</div>
 
-            <div className='col-lg-6 col-xs-12 col-md-6'>
-            <div style={{display: "flex",
-                alignItems: "center"}}>
-                <ErrorOutlineIcon color='primary' />
-                <Typography
-                    className={classes.title}
-                    style={{paddingLeft:"4px"}}
-                    color='textSecondary'
-                    gutterBottom>
-                     Sub Framework
-                </Typography>
-                </div>
+							<Typography
+								className={classes.pos}
+								style={{ paddingLeft: "24px" }}>
+								{projectinfodata && projectinfodata.frameworkSubtype}
+							</Typography>
+						</div>
+					</div>
 
-                <Typography className={classes.pos} style={{paddingLeft:"24px"}}>{projectinfodata && projectinfodata.frameworkSubtype}</Typography>
-            </div>
-        </div>
-
-        <Typography
-            className={classes.title}
-            color='textSecondary'
-            gutterBottom>
-            Project Description
-        </Typography>
-        <TextareaAutosize
-            style={{ width: "350px" }}
-            height={250}
-            rowsMax={55}
-            aria-label='maximum height'
-            placeholder='Maximum 4 rows'
-            defaultValue={projectinfodata && projectinfodata.projectDescription}
-        />
-      
-    </CardContent>
-    </Card>
-
+					<Typography
+						className={classes.title}
+						color='textSecondary'
+						gutterBottom>
+						Project Description
+					</Typography>
+					<TextareaAutosize
+						style={{ width: "350px" }}
+						height={250}
+						rowsMax={55}
+						aria-label='maximum height'
+						placeholder='Maximum 4 rows'
+						defaultValue={projectinfodata && projectinfodata.projectDescription}
+					/>
+				</CardContent>
+			</Card>
 		</Fragment>
 	);
 }

@@ -7,7 +7,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import rootreducer from "./reducer/rootreducer";
 
 const initialState = {};
-const middleware = [thunk];
+export const middleware = [thunk];
 
 const store = createStore(
 	rootreducer,

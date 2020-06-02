@@ -3,17 +3,11 @@
 import React, { Fragment, useEffect } from "react";
 import { connect } from "react-redux";
 
-
 import ProjectInfoDetails from "../../components/PorjectInfoDetails/ProjectInfo/Projectinfodetails";
 import { _get_projectinfodetails } from "../../store/actions/ProjectInfo_actions/_projectInfo_actions";
 
-
-
-
 function SimpleCard(props) {
-
-    const { _getprojectinfodata } = props;
-
+	const { _getprojectinfodata } = props;
 
 	useEffect(() => {
 		debugger;
@@ -25,12 +19,10 @@ function SimpleCard(props) {
 
 	return (
 		<Fragment>
-        <ProjectInfoDetails projectinfodata={props.projectinfo} />
-		
+			<ProjectInfoDetails projectinfodata={props.projectinfo} />
 		</Fragment>
 	);
 }
-
 
 const mapstatetoprops = (state) => {
 	return {

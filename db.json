@@ -1,14 +1,7 @@
 {
 	"chartdata1": {
-		"labels": ["January", "February", "March", "April", "May"],
-		"datasets": [
-			{
-				"data": [65, 59, 80, 81, 56]
-			},
-			{
-				"data": [65, 59, 80, 81, 56]
-			}
-		]
+		"error": "Error msg",
+		"status": 500
 	},
 	"projectlist": [
 		{
@@ -32,33 +25,36 @@
 			"Suntype": "ABCD"
 		}
 	],
-	"chartdata": [
-		{
-			"month": "Jan-2020",
-			"maturityScore": 32,
-			"qualityScore": 42
-		},
-		{
-			"month": "Feb-2020",
-			"maturityScore": 42,
-			"qualityScore": 33
-		},
-		{
-			"month": "Mar-2020",
-			"maturityScore": 42,
-			"qualityScore": 54
-		},
-		{
-			"month": "Apr-2020",
-			"maturityScore": 33,
-			"qualityScore": 44
-		},
-		{
-			"month": "May-2020",
-			"maturityScore": 36,
-			"qualityScore": 40
-		}
-	],
+	"chartdata": {
+		"message": "success",
+		"data": [
+			{
+				"qualityScore": 87.5,
+				"maturityPercentage": 93,
+				"monthYear": "February 2020"
+			},
+			{
+				"qualityScore": 0,
+				"maturityPercentage": 65,
+				"monthYear": "January 2020"
+			},
+			{
+				"qualityScore": 85,
+				"maturityPercentage": 0,
+				"monthYear": "June 2020"
+			},
+			{
+				"qualityScore": 785,
+				"maturityPercentage": 76,
+				"monthYear": "May 2020"
+			},
+			{
+				"qualityScore": 70,
+				"maturityPercentage": 80.25,
+				"monthYear": "March 2020"
+			}
+		]
+	},
 	"projectInfo": {
 		"message": "success",
 		"data": {

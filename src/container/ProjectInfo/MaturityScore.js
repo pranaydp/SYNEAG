@@ -5,7 +5,7 @@ import MaturityTable from "../../components/PorjectInfoDetails/MaturityDetails/M
 import { _get_maturityqualityscore } from "../../store/actions/ProjectInfo_actions/_projectInfo_actions";
 import Spinner from "../../components/Spinner/Spinner";
 import JustifyContent from "../../components/Common/Box/ErrBox";
-const MaturityScore = (props) => {
+export const MaturityScore = (props) => {
 	const { _getmaturitydata } = props;
 
 	useEffect(() => {
@@ -16,15 +16,11 @@ const MaturityScore = (props) => {
 	}, []);
 
 	console.log("maturitydaad", props.maturity);
-	if (props.maturity === null) return <Spinner />;
+	if (props.maturity === null) return <Spinner data-test='spinner' />;
 
 	return (
-		<div>
-			{props.maturity.length > 0 ? (
-				<MaturityTable maturities={props.maturity} />
-			) : (
-				<JustifyContent v={9} />
-			)}
+		<div data-test='component-input'>
+			<MaturityTable data-test='Maturity-table' maturities={props.maturity} />
 		</div>
 	);
 };

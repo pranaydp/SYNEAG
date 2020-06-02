@@ -5,7 +5,7 @@ import QualityTable from "../../components/PorjectInfoDetails/QualityDetails/Qua
 import { _get_maturityqualityscore } from "../../store/actions/ProjectInfo_actions/_projectInfo_actions";
 import Spinner from "../../components/Spinner/Spinner";
 import JustifyContent from "../../components/Common/Box/ErrBox";
-const QualityScore = (props) => {
+export const QualityScore = (props) => {
 	const { _getqualitydata } = props;
 
 	useEffect(() => {
@@ -15,16 +15,12 @@ const QualityScore = (props) => {
 		}, 100);
 	}, []);
 
-	console.log("maturitydaad", props.maturity);
-	if (props.quality === null) return <Spinner />;
+	console.log("maturitydaad", props.quality);
+	if (props.quality === null) return <Spinner data-test='spinner' />;
 
 	return (
-		<div>
-			{props.quality.length > 0 ? (
-				<QualityTable qualities={props.quality} />
-			) : (
-				<JustifyContent v={9} />
-			)}
+		<div data-test='component-input'>
+			<QualityTable data-test='Quality-table' qualities={props.quality} />
 		</div>
 	);
 };

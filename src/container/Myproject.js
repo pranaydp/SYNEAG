@@ -31,7 +31,7 @@ const Myprojects = (props) => {
 		return <Spinner />;
 	} else {
 		return (
-			<div className='card' style={{ height: "auto" }}>
+			<div className='card' style={{ height: "305px" }}>
 				<ProjectDetails projectlist={props.content} heading={Tableheading} />
 			</div>
 		);
