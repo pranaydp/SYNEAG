@@ -1,0 +1,11 @@
+{
+  "server": {
+    "production": {
+      "SERVER_APPLICATION_CONTEXT_PATH": "https://anywebsitename.com"
+    },
+    "development": {
+      "SERVER_APPLICATION_CONTEXT_PATH": "http://developmentwebsite.com:4206"
+    }
+  }
+  
+}
