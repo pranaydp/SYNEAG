@@ -27,7 +27,6 @@ const TableContent = (props) => {
 						    </TableCell> }
 							<TableCell align='center'>{row.FrameworkType}</TableCell>
 							<TableCell align='center'>{row.FrameworkSubtype}</TableCell>
-							
 							<TableCell align='center'> 
 							{row.onBoard === true ?
 							<Tooltip title="OnBoard">
