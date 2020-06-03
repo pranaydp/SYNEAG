@@ -2,8 +2,20 @@
 
 import React from "react";
 import Box from "@material-ui/core/Box";
+import { makeStyles } from "@material-ui/core/styles";
+import { Alert, AlertTitle } from "@material-ui/lab";
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		width: "100%",
+		"& > * + *": {
+			marginTop: theme.spacing(2),
+		},
+	},
+}));
 
 export default function ErrorContent(props) {
+	const classes = useStyles();
 	return (
 		<div style={{ width: "100%" }}>
 			<Box
@@ -13,9 +25,10 @@ export default function ErrorContent(props) {
 				p={12}
 				// bgcolor='background.paper'
 			>
-				<Box p={1} bgcolor='grey'>
-					<h6>{props.err}</h6>
-				</Box>
+				<Alert severity='error'>
+					<AlertTitle>Error</AlertTitle>
+					<strong>{props.err}</strong>
+				</Alert>
 			</Box>
 		</div>
 	);

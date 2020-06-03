@@ -11,7 +11,7 @@ export default function MaturityTableHead(props) {
 	const { header } = props;
 	return (
 		<TableHead>
-			<TableRow>
+			<TableRow style={{ backgroundColor: "lightgray" }}>
 				{header &&
 					header.map((rows) => {
 						return (

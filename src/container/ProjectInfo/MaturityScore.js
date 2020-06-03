@@ -5,9 +5,11 @@ import MaturityTable from "../../components/PorjectInfoDetails/MaturityDetails/M
 import { _get_maturityqualityscore } from "../../store/actions/ProjectInfo_actions/_projectInfo_actions";
 import Spinner from "../../components/Spinner/Spinner";
 import JustifyContent from "../../components/Common/Box/ErrBox";
+import Projectinfo from "./Projectinfo";
+import ErrorContent from "../../components/Common/Box/ErrContent";
 export const MaturityScore = (props) => {
 	const { _getmaturitydata } = props;
-
+	const { loading, error, maturity } = props;
 	useEffect(() => {
 		debugger;
 		setTimeout(() => {
@@ -15,12 +17,17 @@ export const MaturityScore = (props) => {
 		}, 100);
 	}, []);
 
-	console.log("maturitydaad", props.maturity);
-	if (props.maturity === null) return <Spinner data-test='spinner' />;
+	console.log("maturitydaad", maturity);
+	if ((loading || maturity === null) && error === null)
+		return <Spinner data-test='spinner' />;
 
-	return (
-		<div data-test='component-input'>
-			<MaturityTable data-test='Maturity-table' maturities={props.maturity} />
+	return !error ? (
+		<div className='' data-test='component-input'>
+			<MaturityTable data-test='Maturity-table' maturities={maturity} />
+		</div>
+	) : (
+		<div>
+			<ErrorContent err={error} />
 		</div>
 	);
 };
@@ -28,6 +35,8 @@ export const MaturityScore = (props) => {
 const mapstatetoprops = (state) => {
 	return {
 		maturity: state.projectinfo.maturitydata,
+		loading: state.projectinfo.loading,
+		error: state.projectinfo.errmsg,
 	};
 };
 

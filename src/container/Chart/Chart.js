@@ -10,6 +10,7 @@ import ErrorContent from "../../components/Common/Box/ErrContent";
 
 export const Chart = (props) => {
 	const { get_chart } = props;
+	const { loading, error, chart } = props;
 
 	useEffect(() => {
 		get_chart();
@@ -18,17 +19,17 @@ export const Chart = (props) => {
 	debugger;
 	//console.log("data", this.props.chart);
 
-	if ((props.loading || props.chart === null) && props.error === null) {
+	if ((loading || chart === null) && error === null) {
 		return <Spinner data-test='spinner' />;
 	}
 
-	return !props.error ? (
+	return !error ? (
 		<div className='card' data-test='component-input'>
-			<LineChart data-test='Chart-input' chart={props.chart} />{" "}
+			<LineChart data-test='Chart-input' chart={chart} />{" "}
 		</div>
 	) : (
 		<div>
-			<ErrorContent err={props.error} />
+			<ErrorContent err={error} />
 		</div>
 	);
 };

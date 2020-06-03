@@ -13,7 +13,7 @@ const LineChart = (props) => {
 	if (props.chart !== null) {
 		debugger;
 		props.chart.map((record) => {
-			montharr.push(record.month);
+			montharr.push(record.monthYear);
 			qualityarr.push(record.qualityScore);
 			maturityarr.push(record.maturityPercentage);
 		});

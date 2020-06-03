@@ -1,14 +1,17 @@
 /** @format */
 
-import { GET_MATURITYSCORE, CHART_ERROR } from "../../actiontype/actiontypes";
 import {
+	GET_MATURITYSCORE,
 	PROJECTINFO_GET,
 	PROJECTINFO_ERROR,
+	LOADING,
 } from "../../actiontype/actiontypes";
 
 const initialState = {
 	maturitydata: null,
 	qualitydata: null,
+	loading: false,
+	errmsg: null,
 };
 
 const projectinfo_reducer = (state = initialState, action) => {
@@ -19,6 +22,7 @@ const projectinfo_reducer = (state = initialState, action) => {
 				...state,
 				maturitydata: action.payload.data.maturityDetailsList,
 				qualitydata: action.payload.data.qualityDetailsList,
+				loading: false,
 				//dataset: action.payload.datasets,
 			};
 		case PROJECTINFO_GET:
@@ -28,7 +32,17 @@ const projectinfo_reducer = (state = initialState, action) => {
 				projectinfodetails: action.payload.data.project,
 				//dataset: action.payload.datasets,
 			};
-
+		case PROJECTINFO_ERROR:
+			return {
+				...state,
+				errmsg: action.payload,
+				loading: false,
+			};
+		case LOADING:
+			return {
+				...state,
+				loading: true,
+			};
 		default:
 			return state;
 	}
